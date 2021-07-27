@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Switch} from "react-router-dom";
 import Header from "./component/Header";
 import VoteList from "./component/VoteList";
 import AddVotePage from "./component/AddVotePage";
+import DoItVote from "./component/DoItVote";
 
 function App() {
   return (
@@ -12,8 +13,8 @@ function App() {
          <Route exact path="/">
           <VoteList />
          </Route>
-         <Route path="/list/:title">
-            
+         <Route path="/vote/:title">
+            <DoItVote />
           </Route>
          <Route exact path="/create_vote">
           <AddVotePage />

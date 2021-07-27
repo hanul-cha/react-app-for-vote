@@ -196,3 +196,79 @@ label{
 	border: none;
 	color: #fff;
 }
+
+/* -------VOTELIST------- */
+
+.vote_List{
+	position: relative;
+}
+
+.voteWrapper{
+	height: 150px;
+}
+
+.voteListLi{
+	width: cover;
+	max-width: 860px;
+	height: cover; /* 기본값 150 */
+	/* overflow: hidden; */
+	margin: 30px 20px;
+	background-color: #fff;
+	position: relative;
+}
+
+.voteListText{
+	float: left;
+	margin: 20px 0 0 20px;
+}
+.voteListText>h2{
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.personOfVoted{
+	float: right;
+	margin: 20px 20px 0 0;
+}
+.personOfVoted>span{
+	color: blue;
+	font-size: 22px;
+}
+
+
+/* show_Stats */
+.show_Stats{
+	background: yellow;
+	height: 200px;/* 없앨거임 */
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.show_Stats>ul{
+	background: tomato;
+	width:100%;
+}
+
+/* content_list */
+.content_list{
+	width:95%;
+	height: 30px;
+	margin: 10px auto;
+	line-height: 30px;
+	padding-left: 10px;
+	position: relative;
+	background: #f2f2f2;
+}
+.content_list>h4{
+	position: relative;
+	z-index: 20;
+}
+.contentlistBack{
+	height: 100%;
+	
+	position: absolute;
+	top:0;
+	left: 0;
+	background: chartreuse;
+}

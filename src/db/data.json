@@ -1,34 +1,55 @@
 {
-    "lists" : [
-        {
-            "id": 1,
-            "title": "여행 투표"
-        }
-    ],
     "vote": [
         {
             "id": 1,
             "title": "여행투표",
             "text": "얘들아 여행 어디로갈까?",
-            "voteList_1": [
+            "voteList": [
                 {
+                    "id": 1,
                     "content": "서울",
                     "number_of_votes":0
-                }
-            ],
-            "voteList_2": [
+                },
                 {
+                    "id": 2,
                     "content": "부산",
                     "number_of_votes":3
-                }
-            ],
-            "voteList_3": [
+                },
                 {
+                    "id": 3,
                     "content": "제주도",
                     "number_of_votes":1
                 }
             ],
             "user": 4 
+        },
+        {
+            "id": 2,
+            "title": "뭐먹을까",
+            "text": "매운건 뺏습니다",
+            "voteList": [
+                {
+                    "id": 1,
+                    "content": "치킨",
+                    "number_of_votes":2
+                },
+                {
+                    "id": 2,
+                    "content": "곱창",
+                    "number_of_votes":1
+                },
+                {
+                    "id": 3,
+                    "content": "삼겹살",
+                    "number_of_votes":3
+                },
+                {
+                    "id": 4,
+                    "content": "냉면",
+                    "number_of_votes":0
+                }
+            ],
+            "user": 6 
         }
     ]
 }

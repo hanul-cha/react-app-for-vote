@@ -34,3 +34,5 @@ export default function AddVotePage() {
         </form>
     )
 }
+
+/* 값들을 db에 보내주기 */
