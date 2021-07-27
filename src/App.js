@@ -12,6 +12,9 @@ function App() {
          <Route exact path="/">
           <VoteList />
          </Route>
+         <Route path="/list/:title">
+            
+          </Route>
          <Route exact path="/create_vote">
           <AddVotePage />
          </Route>

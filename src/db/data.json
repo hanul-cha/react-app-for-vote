@@ -1,18 +1,34 @@
 {
-    "list" : [
+    "lists" : [
         {
             "id": 1,
             "title": "여행 투표"
         }
     ],
-    "words": [
+    "vote": [
         {
             "id": 1,
             "title": "여행투표",
             "text": "얘들아 여행 어디로갈까?",
-            "voteList":[
-                
-            ]
+            "voteList_1": [
+                {
+                    "content": "서울",
+                    "number_of_votes":0
+                }
+            ],
+            "voteList_2": [
+                {
+                    "content": "부산",
+                    "number_of_votes":3
+                }
+            ],
+            "voteList_3": [
+                {
+                    "content": "제주도",
+                    "number_of_votes":1
+                }
+            ],
+            "user": 4 
         }
     ]
 }
