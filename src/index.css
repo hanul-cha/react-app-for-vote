@@ -31,7 +31,8 @@ html, body{
 	max-width:900px;
 	margin: 0 auto;
 	background-color: #f2f2f2;
-	height: 100vh;
+	height: 100%;
+	min-height: 100vh;
 }
 
 nav ul, li{
@@ -103,6 +104,8 @@ label{
 
 
 /* CREATE_VOTE */
+
+
 .createVote{
 	width: cover;
 	max-width: 860px;
@@ -124,4 +127,72 @@ label{
 
 .createVote>span:last-child{
 	transform: translate(-50%,-50%) rotate( -90deg );
+}
+
+
+/* -----FORM----- */
+
+.addVoteForm{
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+	margin-top: 50px;
+}
+
+.addVoteForm h2{
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+.input_area label{
+	display: block;
+	
+	
+}
+
+.add_input input{
+	display: block;
+}
+
+.input_area input{
+	width: 300px;
+	height: 50px;
+	font-size: 20px;
+	margin: 10px 0;
+	padding: 10px;
+	border: none;
+}
+
+.text_area input{
+	width:100%;
+}
+
+.addVoteList{
+	width: 300px;
+	height: 50px;
+	background: #fff;
+	margin-bottom: 10px;
+	position: relative;
+	cursor: pointer;
+}
+
+.addVoteList>span{
+	width: 27px;
+	height: 8px;
+	background-color: #434343;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.addVoteList>span:last-child{
+	transform: translate(-50%,-50%) rotate( -90deg );
+}
+
+.voteCreateBtn{
+	width: 100px;
+	height: 43px;
+	background-color: cornflowerblue;
+	border: none;
+	color: #fff;
 }
