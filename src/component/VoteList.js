@@ -34,9 +34,9 @@ export default function VoteList() {
                             <ul>
                                 {votes.voteList.map(vs => (
                                     <li className="content_list" key={vs.id}>
-                                        <h4>{vs.content} {Math.round(vs.number_of_votes * (100 / votes.user)) + "%"}</h4>
+                                        <h4>{vs.content} {Math.round(Number(vs.number_of_votes * (100 / votes.user))) + "%"}</h4>
                                         
-                                        <div className="contentlistBack" style={{width:vs.number_of_votes * (100 / votes.user) + "%"}}></div>
+                                        <div className="contentlistBack" style={{width: vs.number_of_votes * (100 / votes.user) + "%"}}></div>
                                     </li>
                                     
                                 ))}
