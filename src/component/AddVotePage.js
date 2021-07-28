@@ -1,5 +1,5 @@
 export default function AddVotePage() {
-    function addVoteIndex() {
+    function addVoteIndex() {/* 항목을 추가하는 함수 */
         const newIndex = document.createElement("input");
         const addInput = document.getElementsByClassName('add_input');
         newIndex.type = "text";
@@ -8,8 +8,12 @@ export default function AddVotePage() {
         addInput[0].appendChild(newIndex);
     }
 
+    function onSubmit(e) {
+        e.preventDefault();
+    }
+
     return (
-        <form className="addVoteForm">
+        <form className="addVoteForm" onSubmit={onSubmit}>
             <h2>투표만들기</h2>
             <div className="input_area">
                 <input type="text" placeholder="투표 제목" />
