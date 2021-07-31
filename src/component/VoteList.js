@@ -4,6 +4,9 @@ import useFetch from '../hooks/useFetch';/* 이거 만들어야함 */
 export default function VoteList() {
     const vote = useFetch("http://localhost:3001/vote");
     
+    let removeNan = (users) => {
+        return (0 < users) ? 100/users : 0 ;
+    }
     
     return (
         <>
@@ -34,9 +37,13 @@ export default function VoteList() {
                             <ul>
                                 {votes.voteList.map(vs => (
                                     <li className="content_list" key={vs.id}>
-                                        <h4>{vs.content} {Math.round(Number(vs.number_of_votes * (100 / votes.user))) + "%"}</h4>
+                                        <h4>{vs.content} {Math.round(Number(vs.number_of_votes * removeNan(votes.user))) + "%"}</h4>
                                         
-                                        <div className="contentlistBack" style={{width: vs.number_of_votes * (100 / votes.user) + "%"}}></div>
+                                        <div className="contentlistBack" style={{
+                                            width: vs.number_of_votes * removeNan(votes.user) + "%"
+                                            }}>
+
+                                        </div>
                                     </li>
                                     
                                 ))}
