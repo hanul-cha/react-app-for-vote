@@ -4,6 +4,7 @@ import VoteList from "./component/VoteList";
 import AddVotePage from "./component/AddVotePage";
 import DoItVote from "./component/DoItVote";
 
+
 function App() {
   return (
     <BrowserRouter>

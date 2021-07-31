@@ -4,6 +4,8 @@ import useFetch from '../hooks/useFetch';/* 이거 만들어야함 */
 export default function VoteList() {
     const vote = useFetch("http://localhost:3001/vote");
     
+    
+
     let removeNan = (users) => {
         return (0 < users) ? 100/users : 0 ;
     }
@@ -17,7 +19,7 @@ export default function VoteList() {
             <ul className="vote_List">
                 {vote.map(votes => (
                     <li key={votes.id} className="voteListLi">
-                        <Link to={`/list/${votes.title}`}>
+                        <Link to={`/vote/${votes.title}`}> 
                             <div className="voteWrapper">
                                 <div className="voteListText">
                                     <h2>

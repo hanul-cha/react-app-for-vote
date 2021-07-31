@@ -1,9 +1,12 @@
 import { useRef } from "react";
+import { useHistory } from "react-router-dom";
 
 export default function AddVotePage() {
     let numberOfVotes = [
 
     ]/*  */
+    const history = useHistory();
+
     const titleRef = useRef(null);
     const textRef = useRef(null);
     
@@ -42,7 +45,8 @@ export default function AddVotePage() {
             }),
         }).then(res => {
             if(res.ok) {
-                alert("DB추가완료");
+                alert("새로운 투표가 생성 되었습니다!");
+                history.push("/");
             }
         })
     }
@@ -73,7 +77,7 @@ export default function AddVotePage() {
             <div className="add_input input_area">
                 <label>투표항목</label>
                 <input type="text" placeholder="항목입력" /> {/* 초기 input 추가할지 아님 처음부터 없앨지 고민해봐야함 */}
-                
+                <input type="text" placeholder="항목입력" />
             </div>
             <div className="addVoteList" onClick={addVoteIndex}>
                 <span></span>
