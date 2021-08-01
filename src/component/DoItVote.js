@@ -4,39 +4,41 @@ import useFetch from "../hooks/useFetch";
 export default function DoItVote() {
     const title  = useParams().title;
     let voteTitle = useFetch(`http://localhost:3001/vote?title=${title}`);
-    let firstVoteList = [
-            
-    ]
-
     
-    
-    console.log(voteTitle);
-
     function onSubmit(e) {
         e.preventDefault();
-        console.log(voteTitle)
+        
+        let firstVoteList = 
+            /* {
+                "id": 1,
+                "content": "하나",
+                "number_of_votes": 0
+              },
+              {
+                "id": 2,
+                "content": "둘",
+                "number_of_votes": 0
+              } */
+              voteTitle[0].voteList
+        ;
+        
+        
         
         const doVoteLists = document.getElementsByName("doVoteList");
-        /* let Listschecked = doVoteLists.value; */
         for(let i=0;i<doVoteLists.length;i++){
             console.log(doVoteLists[i].checked);
-            
+            if(doVoteLists[i].checked){
+                firstVoteList[i].number_of_votes += 1;
+                
+                
+            }else{
+               /*  firstVoteList[i] = { 
+                    number_of_votes: voteTitle[0].voteList[i],
+                } */
+            }
         }
 
-        /* function addVoteNum() {
-            for(let i=0;i<=doVoteLists.length;i++){
-                
-            }
-            for(let i=0;i<addInput.length;i++){
-                numberOfVotes[i] = {
-                    id: i+1,
-                    content: addInput[i].value,
-                    number_of_votes: 0,
-                }
-                
-                
-            }
-        } */
+        console.log(firstVoteList);
         
         
         fetch(`http://localhost:3001/vote/${voteTitle[0].id}`, {
@@ -47,6 +49,7 @@ export default function DoItVote() {
             body: JSON.stringify({
                 ...voteTitle[0],
                 user: voteTitle[0].user += 1,
+                voteList: firstVoteList
             }),
         }).then(res => {
             if(res.ok) {
@@ -64,7 +67,7 @@ export default function DoItVote() {
                     <h2>{vote.title}</h2>
                     <form onSubmit={onSubmit}>
                         {vote.voteList.map((lists) => (
-                            <label key={lists.id}><input type="checkbox" name="doVoteList"  />{lists.content}</label>
+                            <label key={lists.id}><input type="radio" name="doVoteList" />{lists.content}</label>
                         ))}
                         <button>
                             투표하기

@@ -53,20 +53,20 @@
     },
     {
       "title": "테스트",
-      "text": "테스트투표입니다",
+      "text": "테스트페이지입니다",
       "voteList": [
         {
           "id": 1,
           "content": "하나",
-          "number_of_votes": 0
+          "number_of_votes": 1
         },
         {
           "id": 2,
           "content": "둘",
-          "number_of_votes": 0
+          "number_of_votes": 2
         }
       ],
-      "user": 0,
+      "user": 3,
       "id": 3
     }
   ]
