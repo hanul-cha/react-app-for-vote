@@ -9,7 +9,6 @@ export default function AddVotePage() {
 
     const titleRef = useRef(null);
     const textRef = useRef(null);
-    
 
 
     function onSubmit(e) {
@@ -30,10 +29,10 @@ export default function AddVotePage() {
         
         
         
-        /* console.log(addInput[1].value); */
+        
 
         fetch("http://localhost:3001/vote", {
-            method: 'POSt',
+            method: 'POST',
             headers: {
                 "Content-Type": "application/json",
             },
@@ -68,16 +67,16 @@ export default function AddVotePage() {
         <form className="addVoteForm" onSubmit={onSubmit}>
             <h2>투표만들기</h2>
             <div className="input_area">
-                <input type="text" placeholder="투표 제목" ref={titleRef} />
+                <input type="text" placeholder="투표 제목" ref={titleRef} required />
             </div>
             <div className="input_area text_area">
                 <label>텍스트</label>
-                <input type="text" placeholder="멤버에게 전할 소식을 남겨보세요" ref={textRef} />
+                <input type="text" placeholder="멤버에게 전할 소식을 남겨보세요" ref={textRef} required />
             </div>
             <div className="add_input input_area">
                 <label>투표항목</label>
-                <input type="text" placeholder="항목입력" /> {/* 초기 input 추가할지 아님 처음부터 없앨지 고민해봐야함 */}
-                <input type="text" placeholder="항목입력" />
+                <input type="text" placeholder="항목입력" required /> {/* 초기 input 추가할지 아님 처음부터 없앨지 고민해봐야함 */}
+                <input type="text" placeholder="항목입력" required />
             </div>
             <div className="addVoteList" onClick={addVoteIndex}>
                 <span></span>

@@ -2,15 +2,19 @@ import { useParams } from "react-router-dom"
 import useFetch from "../hooks/useFetch";
 
 export default function DoItVote() {
-    const { title }  = useParams();
-    const voteTitle = useFetch(`http://localhost:3001/vote?title=${title}`);
+    const title  = useParams().title;
+    let voteTitle = useFetch(`http://localhost:3001/vote?title=${title}`);
     let firstVoteList = [
             
     ]
+
     
+    
+    console.log(voteTitle);
 
     function onSubmit(e) {
         e.preventDefault();
+        console.log(voteTitle)
         
         const doVoteLists = document.getElementsByName("doVoteList");
         /* let Listschecked = doVoteLists.value; */
@@ -34,22 +38,22 @@ export default function DoItVote() {
             }
         } */
         
-
-        fetch(`http://localhost:3001/vote?title=${title}`, {
-            method: 'PUT',
+        
+        fetch(`http://localhost:3001/vote/${voteTitle[0].id}`, {
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                ...voteTitle,
-                user: 1,
+                ...voteTitle[0],
+                user: voteTitle[0].user += 1,
             }),
         }).then(res => {
             if(res.ok) {
                 alert("반영되었습니다!");
-                    
+                
             }
-        })
+        })/* db에 반영 */
     }
     
 

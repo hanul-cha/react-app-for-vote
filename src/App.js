@@ -14,7 +14,7 @@ function App() {
          <Route exact path="/">
           <VoteList />
          </Route>
-         <Route path="/vote/:title">
+         <Route exact path="/vote/:title">
             <DoItVote />
           </Route>
          <Route exact path="/create_vote">
