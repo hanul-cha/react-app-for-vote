@@ -1,45 +1,23 @@
-import { useParams } from "react-router-dom"
+import { useHistory, useParams } from "react-router-dom"
 import useFetch from "../hooks/useFetch";
 
 export default function DoItVote() {
     const title  = useParams().title;
+    const history = useHistory();
     let voteTitle = useFetch(`http://localhost:3001/vote?title=${title}`);
     
     function onSubmit(e) {
         e.preventDefault();
         
-        let firstVoteList = 
-            /* {
-                "id": 1,
-                "content": "하나",
-                "number_of_votes": 0
-              },
-              {
-                "id": 2,
-                "content": "둘",
-                "number_of_votes": 0
-              } */
-              voteTitle[0].voteList
-        ;
-        
-        
-        
+        let firstVoteList = voteTitle[0].voteList;
+
         const doVoteLists = document.getElementsByName("doVoteList");
         for(let i=0;i<doVoteLists.length;i++){
             console.log(doVoteLists[i].checked);
             if(doVoteLists[i].checked){
-                firstVoteList[i].number_of_votes += 1;
-                
-                
-            }else{
-               /*  firstVoteList[i] = { 
-                    number_of_votes: voteTitle[0].voteList[i],
-                } */
+                firstVoteList[i].number_of_votes += 1;   
             }
         }
-
-        console.log(firstVoteList);
-        
         
         fetch(`http://localhost:3001/vote/${voteTitle[0].id}`, {
             method: "PUT",
@@ -54,12 +32,11 @@ export default function DoItVote() {
         }).then(res => {
             if(res.ok) {
                 alert("반영되었습니다!");
-                
+                history.push("/")
             }
         })/* db에 반영 */
     }
     
-
     return (
         <>
             {voteTitle.map((vote) => (

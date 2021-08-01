@@ -10,11 +10,9 @@ export default function AddVotePage() {
     const titleRef = useRef(null);
     const textRef = useRef(null);
 
-
     function onSubmit(e) {
         e.preventDefault();
         let addInput = document.querySelectorAll('.add_input input');
-        
         
         for(let i=0;i<addInput.length;i++){
             numberOfVotes[i] = {
@@ -22,8 +20,6 @@ export default function AddVotePage() {
                 content: addInput[i].value,
                 number_of_votes: 0,
             }
-            /* test[i] = addInput[i].value; */
-            
         }
         
         
