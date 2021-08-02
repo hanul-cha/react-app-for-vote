@@ -74,5 +74,3 @@ export default function DoItVote() {
     /* useFetch로 가져와서(배열로 할당되어있기때문) map을 사용해야함 */
     
 }
-
-/* 여기엔 투표를 할수 있는 부분을 실질적으로 만들어줄것임 Day컴포넌트 참고 */

@@ -14,6 +14,10 @@
 + 21.08.01
     - 투표결과 반영기능 구현완료, 체크를 하나라도 안했을때 경고창을 띄워주게 구현
     - 투표페이지 css만드는중...
++ 21.08.02
+    - 투표페이지 css완료
+    - 삭제 기능 구현중
+
 ### How to use ###
 
 json-server REST api가 필요합니다. 
@@ -25,5 +29,12 @@ json서버 포트는 3001로 사용해줍니다.
 json-server --watch ./src/db/data.json --port 3001
 ```
 npm은 어떤 포트를 사용해도 무방합니다.
+
+
+리액트 라우터로 구현했습니다 설치가 필요합니다.
+```
+npm install react-router-dom
+```
+
 
 
