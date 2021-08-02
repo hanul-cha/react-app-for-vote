@@ -20,6 +20,10 @@
 
 ### How to use ###
 
+리액트 라우터로 구현했습니다 설치가 필요합니다.
+```
+npm install react-router-dom
+```
 json-server REST api가 필요합니다. 
 ```
 npm intall -g json-server (글로벌로 설치해줍니다.)
@@ -31,10 +35,7 @@ json-server --watch ./src/db/data.json --port 3001
 npm은 어떤 포트를 사용해도 무방합니다.
 
 
-리액트 라우터로 구현했습니다 설치가 필요합니다.
-```
-npm install react-router-dom
-```
+
 
 
 
