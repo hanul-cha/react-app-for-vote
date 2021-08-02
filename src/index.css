@@ -299,6 +299,7 @@ label{
 	background: #f2f2f2;
 	padding-left: 10px;
 	padding: 20px;
+	cursor: pointer;
 }
 
 .do_vote button{
@@ -308,5 +309,38 @@ label{
 	border: none;
 	color: #fff;
 	margin: 20px 0 20px 20px;
+	cursor: pointer;
+}
+
+/* -------deletPage------- */
+.deletUl{
+	background: #fff;
+	margin: 30px auto;
+	padding: 10px;
+	width: 95%;
+	
+}
+
+.deletUl h2{
+	float: left;
+	height: 43px;
+	line-height: 43px;
+}
+
+.deletUl button{
+	float: right;
+	width: 100px;
+	height: 43px;
+	background-color: cornflowerblue;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.deletUl li{
+	width: 95%;
+	background: #f2f2f2;
+	margin: 10px auto;
+	padding: 20px;
 }
 

@@ -52,22 +52,22 @@
       "user": 8
     },
     {
-      "title": "테스트",
-      "text": "테스트페이지입니다",
+      "title": "테스트입니당",
+      "text": "테스트에요",
       "voteList": [
         {
           "id": 1,
           "content": "하나",
-          "number_of_votes": 7
+          "number_of_votes": 0
         },
         {
           "id": 2,
           "content": "둘",
-          "number_of_votes": 7
+          "number_of_votes": 2
         }
       ],
-      "user": 14,
-      "id": 3
+      "user": 2,
+      "id": 5
     }
   ]
 }
