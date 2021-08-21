@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 export default function AddVotePage() {
     let numberOfVotes = [
 
-    ]/*  */
+    ]/* 초기값 빈배열 */
     const history = useHistory();
 
     const titleRef = useRef(null);
