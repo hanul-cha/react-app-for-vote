@@ -1,7 +1,7 @@
 # VOTE APP #
 ### using react project ###
 
-> 투표함을 언제든 만들수 있고 삭제도 자유로우며 DB에 반영되어 투표현황을 볼수 있게 제작하는것이 목표입니다.
+> 투표함을 언제든 만들수 있고 삭제도 자유로우며 서버 반영되어 투표현황을 볼수 있게 제작하는것이 목표입니다.
 + 21.07.28 
     - 더미데이터로 리스트구현 완료
     - form양식 생성
@@ -27,7 +27,7 @@ npm install react-router-dom
 ```
 json-server REST api가 필요합니다. 
 ```
-npm intall -g json-server (글로벌로 설치해줍니다.)
+npm intall json-server
 ```
 json서버 포트는 3001로 사용해줍니다.
 ```
