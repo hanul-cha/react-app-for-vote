@@ -58,15 +58,15 @@
         {
           "id": 1,
           "content": "하나",
-          "number_of_votes": 0
+          "number_of_votes": 1
         },
         {
           "id": 2,
           "content": "둘",
-          "number_of_votes": 2
+          "number_of_votes": 3
         }
       ],
-      "user": 2,
+      "user": 4,
       "id": 5
     }
   ]

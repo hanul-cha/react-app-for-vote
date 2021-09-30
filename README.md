@@ -2,6 +2,9 @@
 ### using react project ###
 
 > 투표함을 언제든 만들수 있고 삭제도 자유로우며 서버 반영되어 투표현황을 볼수 있게 제작하는것이 목표입니다.
+
+> 깃허브 페이지 
+  url: https://hanul-cha.github.io/react-app-for-vote/
 + 21.07.28 
     - 더미데이터로 리스트구현 완료
     - form양식 생성

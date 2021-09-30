@@ -1,4 +1,5 @@
 {
+  "homepage": "https://hanul-cha.github.io/react-app-for-vote/",
   "name": "myvote",
   "version": "0.1.0",
   "private": true,
@@ -7,6 +8,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "concurrently": "^6.2.2",
+    "gh-pages": "^3.2.3",
     "nodemon": "^2.0.13",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -20,7 +22,9 @@
     "start": "concurrently --kill-others-on-fail \"npm run node\" \"npm run react-project\" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
