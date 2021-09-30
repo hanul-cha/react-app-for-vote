@@ -12,16 +12,16 @@ function App() {
       <div className="App">
        <Header />
        <Switch>
-        <Route exact path="/">
+        <Route exact path="/react-app-for-vote/">
           <VoteList />
         </Route>
-        <Route exact path="/delete_vote">
+        <Route exact path="/react-app-for-vote/delete_vote">
           <DeleteVote />  
         </Route>
-        <Route exact path="/vote/:title">
+        <Route exact path="/react-app-for-vote/vote/:title">
           <DoItVote />
         </Route>
-        <Route exact path="/create_vote">
+        <Route exact path="/react-app-for-vote/create_vote">
           <AddVotePage />
         </Route>
        </Switch>

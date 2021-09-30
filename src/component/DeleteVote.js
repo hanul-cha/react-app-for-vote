@@ -12,7 +12,7 @@ export default function DeleteVote() {
             }).then(res => {
                 if(res.ok){
                     alert("삭제되었습니다.");
-                    history.push("/");
+                    history.push("/react-app-for-vote");
                 }
             });
             /* console.log(selectVotes.id) */

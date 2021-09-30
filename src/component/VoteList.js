@@ -12,14 +12,14 @@ export default function VoteList() {
     
     return (
         <>
-            <Link to="/create_vote" className="createVote">
+            <Link to="/react-app-for-vote/create_vote" className="createVote">
                 <span></span>
                 <span></span>
             </Link>
             <ul className="vote_List">
                 {vote.map(votes => (
                     <li key={votes.id} className="voteListLi">
-                        <Link to={`/vote/${votes.title}`}> 
+                        <Link to={`/react-app-for-vote/vote/${votes.title}`}> 
                             <div className="voteWrapper">
                                 <div className="voteListText">
                                     <h2>

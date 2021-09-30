@@ -43,7 +43,7 @@ export default function DoItVote() {
             }).then(res => {
                 if(res.ok) {
                     alert("반영되었습니다!");
-                    history.push("/")
+                    history.push("/react-app-for-vote")
                 }
             })/* db에 반영 */
 

@@ -41,7 +41,7 @@ export default function AddVotePage() {
         }).then(res => {
             if(res.ok) {
                 alert("새로운 투표가 생성 되었습니다!");
-                history.push("/");
+                history.push("/react-app-for-vote");
             }
         })
     }
